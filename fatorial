@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+	setlocale (LC_ALL, "");
+	
+	int num, fat, i;
+	
+	printf( "Digite um número inteiro positivo:");
+	scanf ("%d", &num);
+	
+	while (num <= 0)
+	{
+		printf ("Digite um número válido:/n");
+		printf ("Digite um número inteiro positivo;");
+		scanf ("%d", &num);
+	}
+	   fat =1;
+	   for (i=1; i <= num; i++)
+	   fat = fat * i;
+	   printf ("O fatorial de %d é %d \n", num, fat);	
+	
+	return 0;
+}
